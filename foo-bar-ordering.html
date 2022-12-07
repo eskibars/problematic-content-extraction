@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Foo Bar Examples</title>
+    </head>
+    <script lang="javascript" id="example-4">
+        // Example 4
+        window.onload = function() {
+            const node = document.createTextNode(['f','o','o',' ','b','a','r'].join(''));
+            document.getElementById('jsadd').appendChild(node);
+        }
+    </script>
+
+    <style id="example-5">
+        #csshidden {
+            display: none;
+        }
+    </style>
+
+    <style id="example-6">
+        #cssadd:before {
+            content: "foo bar"
+        }
+    </style>
+
+    <style id="example-7">
+        #flipped-table {
+            transform:rotate(90deg);
+            margin: 15px;
+        }
+        #flipped-table td{
+            padding: 5px;
+            transform:rotate(-90deg);
+        }
+    </style>
+<body>
+<!-- Example 1: Complex elements can later look very simple to the user/browser -->
+<div>f<span style="display:none">ox</span><span>oo</span>&nbsp;bar</span></div>
+<hr>
+
+<!-- Example 2: HTML natively supports things like hexadecimal character encoding -->
+<div>&#x66;&#x6f;&#x6f;&nbsp;&#x62;&#x61;&#x72;</div>
+<hr>
+
+<!-- Example 3: HTML natively supports changing text direction -->
+<div><bdo dir="rtl">rab oof</bdo></div>
+<hr>
+
+<!-- Example 4: Javascript can change/add elements -->
+<div id="jsadd"></div>
+<hr>
+
+<!-- Example 5: CSS can change/add elements -->
+<div>foo <span id="csshidden">baz</span> bar</div>
+<hr>
+
+<!-- Example 6: CSS can change/add elements -->
+<div id="cssadd"></div>
+<hr>
+
+<!-- Example 7: CSS can rotate elements to display them out of order to the way a computer would read them -->
+<table id="flipped-table">
+    <tbody>
+        <tr><td>bar</td></tr>
+        <tr><td>foo</td></tr>
+    </tbody>
+</table>
+<hr>
+
+<!-- Example 8: Many modern browsers are pretty lenient in how they show objects.
+    Trying to replicate this leniency can be lengthy/faulty -->
+<div>
+<span>foo</pre>
+<pre>bar</h2>
+</div>
+<hr>
+
+<!-- Example 9: there are HTML tags you might not know about/handle
+     and can have different ordering when read by a machine-->
+<div>bar<rt style="font-size:medium">foo</rt></div>
+<hr>
+</body>
+</html>
